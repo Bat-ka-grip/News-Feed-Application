@@ -15,22 +15,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5"
-        android:backgroundTint="@color/purple"
+        android:backgroundTint="@color/white"
         app:cardCornerRadius="20dp"
+        app:cardElevation="6dp"
+
 
         >
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            >
+
 
             <com.google.android.material.textview.MaterialTextView
                 style="@style/MaterialAlertDialog.Material3.Title.Panel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Account Created succesfully" />
-
-
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="183dp"
+                android:text="Account Created succesfully"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:fontFamily="sans-serif-smallcaps" />
         </RelativeLayout>
     </com.google.android.material.card.MaterialCardView>
 

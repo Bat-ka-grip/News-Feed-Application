@@ -141,6 +141,8 @@ class MainActivity2 : AppCompatActivity() {
             // if form is complete then open new activity that displays the account is created
             if(form_ready){
                 // write your intent here
+                val intent = Intent(this, MainActivity3::class.java)
+                startActivity(intent)
                 Toast.makeText(this, "account created created", Toast.LENGTH_SHORT).show()
             }
         }
