@@ -43,12 +43,12 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        // send user to login page
-        val floatingActionButton = findViewById<FloatingActionButton>(R.id.floatingActionButton)
-        floatingActionButton.setOnClickListener() {
-            val intent = Intent(this, MainActivity2::class.java)
-            startActivity(intent)
-        }
+//        // send user to login page
+//        val floatingActionButton = findViewById<FloatingActionButton>(R.id.floatingActionButton)
+//        floatingActionButton.setOnClickListener() {
+//            val intent = Intent(this, MainActivity2::class.java)
+//            startActivity(intent)
+//        }
 
     }
 
