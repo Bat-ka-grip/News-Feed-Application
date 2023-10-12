@@ -6,39 +6,144 @@
     android:layout_height="match_parent"
     tools:context=".fragments.fragmentProfilefragment">
 
-    <ImageView
-        android:id="@+id/profile_photo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="62dp"
-        android:layout_marginEnd="148dp"
-        android:src="@drawable/icon_2" />
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/user_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/profile_photo"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/profile_matetialCardView_container"
+        android:layout_width="360dp"
+        android:layout_height="120dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:text="User_Id"
-        android:textSize="20sp"
-        app:fontFamily="sans-serif-smallcaps" />
+        android:layout_marginBottom="20dp">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="47dp"
-        android:layout_marginBottom="45dp"
-        android:backgroundTint="@color/purple"
-        android:text="SIGNUP" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/profile_image_container"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                app:cardCornerRadius="60dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <ImageView
+                    android:id="@+id/profileImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/profile_image"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/userName_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/profile_image_container"
+                android:fontFamily="monospace"
+                android:text="Name"
+
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/user_nameId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userName_profile"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/profile_image_container"
+                android:text="/@User_name" />
+
+            <ImageButton
+                android:id="@+id/profile_notification_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="110dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="62dp"
+                android:src="@drawable/profile_notification_icon"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_matetialCardView_container"
+        app:dividerInsetStart="16dp"
+        app:dividerInsetEnd="16dp"
+        app:dividerThickness="2dp"
+        app:dividerColor="@color/purple"
+        />
+
+
+    <RelativeLayout
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#5C00E4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/divider"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_centerHorizontal="true">
+                        <include
+                            layout="@layout/userpostcard"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <include
+                            layout="@layout/userpostcard"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <include
+                            layout="@layout/userpostcard"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <include
+                            layout="@layout/userpostcard"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
 
 </RelativeLayout>
