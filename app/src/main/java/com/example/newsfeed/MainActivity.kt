@@ -3,6 +3,7 @@ package com.example.newsfeed
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -11,6 +12,7 @@ import com.example.newsfeed.fragments.fragmentFeedfragment
 import com.example.newsfeed.fragments.fragmentProfilefragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,17 +45,10 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-//        // send user to login page
-//        val floatingActionButton = findViewById<FloatingActionButton>(R.id.floatingActionButton)
-//        floatingActionButton.setOnClickListener() {
-//            val intent = Intent(this, MainActivity2::class.java)
-//            startActivity(intent)
-//        }
-
     }
 
+//    this is for replacing the frame layout with fragments
     private fun replaceFragment(fragment: Fragment){
-//        FragmentManager fragmentManager = getSupportFragmentManager();
         val fragmentManager:FragmentManager = supportFragmentManager
         val fragmentTransaction:FragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.frameLayout, fragment)

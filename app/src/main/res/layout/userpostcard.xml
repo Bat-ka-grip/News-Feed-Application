@@ -17,9 +17,12 @@
                 android:id="@+id/news_heading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/news_heading"
-                android:textSize="26sp"
-                android:layout_margin="15dp"/>
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:text="user posts"
+                android:textSize="26sp" />
 
             <TextView
                 android:layout_margin="15dp"
@@ -30,19 +33,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/news_disctiption"/>
 
-            <ImageButton
-                android:id="@+id/save_later_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/news_discription"
-                android:layout_alignParentEnd="true"
-                android:layout_gravity="center"
-                android:padding="2dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="7dp"
-                android:layout_marginRight="10dp"
-                android:background="@android:color/transparent"
-                android:src="@drawable/save_later_icon1" />
+
 
         </RelativeLayout>
     </com.google.android.material.card.MaterialCardView>
