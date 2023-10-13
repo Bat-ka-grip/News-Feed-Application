@@ -1,9 +1,8 @@
 <resources>
-    <string name="app_name">news feed</string>
+    <string name="app_name">Pillai Buzz</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="news_heading"><b>Heading</b></string>
     <string name="news_disctiption">this is the discription for the news/anouncements/articles.
-        there is lot ofhhsadhpiuf codbvjdghvnhvb dghndcvugvbdiuivn jduvipgv
     </string>
 </resources>
